@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE validators PUBLIC 
+"-//Apache Struts//XWork Validator 1.0.2//EN"
+"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+
+
+<validators>
+<field name="produit.codePdt">
+<field-validator type="requiredstring">
+<message key="codePdt.obligatoire"></message>
+</field-validator>
+
+</field>
+<field name="produit.nomPdt">
+<field-validator type="requiredstring">
+<message key="nomPdt.obligatoire"></message>
+</field-validator>
+</field>
+<field name="produit.qtePdt">
+<field-validator type="int">
+<message key="qtePdt.obligatoire"></message>
+</field-validator>
+</field>
+<field name="produit.descPdt">
+<field-validator type="requiredstring">
+<message key="descPdt.obligatoire"></message>
+</field-validator>
+</field>
+<field name="produit.prixPdt">
+<field-validator type="int">
+<message key="prixPdt.obligatoire"></message>
+</field-validator>
+</field>
+</validators>

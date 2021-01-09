@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    
+    <package name="default" namespace="/" extends="struts-default">
+    
+
+        <default-action-ref name="index"></default-action-ref>
+
+        <action name="index">
+            <result>views/index.jsp
+            
+                
+            </result>
+        </action>
+        <action name="downloadPDFFileAction" class="org.sid.web.jasperAction" method="downloadCSVFileAction">
+   <result name="success">views/rapportPdf.jsp</result>
+   </action>
+    
+   <action name="pdf" class="org.sid.web.jasperAction"
+			>
+			<result name="success">views/rapportPdf.jsp</result>
+		</action>
+		
+<action name="produits" class="org.sid.web.ProduitAction" method="index">
+<result name="success">views/Produits.jsp</result>
+</action>
+<action name="produits1" class="org.sid.web.produitApprv" method="index1">
+<result name="success">views/Approvis.jsp</result>
+</action>
+<action name="save" class="org.sid.web.ProduitAction" method="save">
+<result name="success">views/Produits.jsp</result>
+<result name="input">views/Produits.jsp</result>
+</action>
+<action name="execute" class="org.sid.web.produitApprv" method="execute">
+<result name="success">views/Approvis.jsp</result>
+<result name="input">views/Approvis.jsp</result>
+</action>
+<action name="delete" class="org.sid.web.ProduitAction" method="delete">
+<result name="success">views/Produits.jsp</result>
+</action>
+<action name="delete1" class="org.sid.web.produitApprv" method="delete1">
+<result name="success">views/Approvis.jsp</result>
+</action>
+<action name="edit" class="org.sid.web.ProduitAction" method="edit">
+<result name="success">views/UpdateAchat.jsp</result>
+<result name="input">views/Produits.jsp</result>
+
+
+</action>
+
+<action name="modifier" class="org.sid.web.ProduitAction" method="modifier">
+<result name="success">views/Produits.jsp</result>
+
+
+</action>
+
+
+ 
+
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>
